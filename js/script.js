@@ -35,14 +35,16 @@ function makePopup(contentId) {
 	popup.className = 'popup';
 	popup.innerHTML = document.getElementById('popup-base').innerHTML;
 
-	popup.querySelector('.content-cnt').innerHTML = document.getElementById(contentId).innerHTML;
+	const template = document.getElementById(contentId)
+	popup.style.background = template.dataset.background
+	popup.querySelector('.content-cnt').innerHTML = template.innerHTML;
 
 	document.body.append(popup);
 	opened.set(contentId, popup);
 	initializers[contentId]?.()
 
-	popup.style.top = (window.innerHeight - popup.clientHeight) / 2 + 'px';
-	popup.style.left = (window.innerWidth - popup.clientWidth) / 2 + 'px';
+	popup.style.top = Math.floor(Math.random() * 250) + 125 + 'px';
+	popup.style.left = Math.floor(Math.random() * 880) + 440 + 'px';
 
 	registerResizer(popup, '.top-bar', e => {
 		const offsets = popup.getBoundingClientRect();
