@@ -91,33 +91,38 @@
     </div>
   </template>
 
-  <template id="user-popup" data-background="blue">
+  <template id="user-popup" data-background="#021da8">
     <h2 style="margin:5px 10px;font-family: 'OCRA';color: white;">USER INFO</h2>
     <div style="float:left;margin: 0 10px; display: flex;">
-      <img style='margin: 5px; margin-left: 0px; border-style: outset; border-width: 8px;'
-        src="https://i.redd.it/7vw6dtzvw3jb1.jpg" alt="user info" width="150" height="150">
+      <img style='margin: 5px; margin-left: 0px; border-style: outset; border-width: 8px;' src="assets/images/me.jfif"
+        alt="user info" width="150" height="150">
     </div>
     <div
       style="color: white;margin: 0 10px; font-size: 18px; font-family: 'OCRA'; max-width: 600px;min-height: 165px;border-top:solid;border-bottom:solid;border-width:1px; padding: 5px;">
-      My name is <strong>Aidan Khan</strong>. I'm a first-year student at Concordia university majoring in Computation
-      Arts.
+      My name is <strong>Aidan Khan</strong>. I'm a first-year student at Concordia University majoring in
+      <strong>Computation Arts.</strong><br> I'm currently located in <strong>Montreal</strong>, Quebec.<br>
+      <br><strong>On this website, you'll be able to view my best work. Enjoy!</strong>
     </div>
     <div
       style="display:flex;color: white;margin: 5px 10px;;font-size:25px;font-family: 'OCRA';max-width: 600px;border-top:solid;border-bottom:solid;border-width:1px; padding: 5px; padding-left: 0px;">
       <strong>MY ART</strong>
     </div>
     <div style="margin: 0 10px; max-width: 600px; font-family: 'OCRA';color: white;">
-      blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blah blah blah blah
-      blah blah blah blah blah
+      <div style="margin-right:150px;">
+        For the past three years, I've been exploring and cultivating skills in multiple creative media. I enjoy
+        exploring
+        digital artforms like digital illustration, musical composition using DAWs, and 3D modeling. I love
+        combining these skills for various projects, such as animated 3D renders or games.
+      </div>
     </div>
-    <div style="position: absolute; bottom: 0; right: 0; border-style:solid;border-width:2px; margin: auto;background-color: blue; padding: 5px; padding-bottom: 1px
+    <div style="position: absolute; bottom: 0; right: 0; border-style:solid;border-width:2px; margin: auto;background-color: #021da8; padding: 5px; padding-bottom: 1px
       ; border-color: white;">
       <a target=" _blank" href="https://www.instagram.com/aidankhan51/?igsh=MW9xdTl1NHJnaHI0aA%3D%3D">
-        <img style='margin: 5px' src="assets/images/instagram.png" alt="instagram" width="50" height="50"></a>
+        <img class="socials" src="assets/images/instagram.png" alt="instagram" width="40" height="40"></a>
       <a target="_blank" href="mailto:aidan.khan31@gmail.com">
-        <img style='margin: 5px' src="assets/images/email.png" alt="email" width="50" height="50"></a>
+        <img class="socials" src="assets/images/email.png" alt="email" width="40" height="40"></a>
       <a target="_blank" href="https://www.linkedin.com/in/aidan-khan-86b6902b2/">
-        <img style='margin: 5px' src="assets/images/linkedin.png" alt="linkedin" width="50" height="50"></a>
+        <img class="socials" src="assets/images/linkedin.png" alt="linkedin" width="40" height="40"></a>
     </div>
   </template>
 
@@ -135,10 +140,10 @@
     </div>
   </template>
 
-  <template id="games-popup">
-    <strong style=" font-family: 'SCDF' ;font-size: 50px;">PROJECTS</strong>
+  <template id="games-popup" data-background="url('../assets/images/GamePaper.png')">
+    <strong style=" font-family: 'SCDF' ;font-size: 50px; color: white;">PROJECTS</strong>
     <div
-      style="font-family: 'Dots';border-bottom: dotted;border-width:3px; margin: 15px 0px; font-family: 'Dots'; font-size: 20px; padding-bottom: 3px;">
+      style="letter-spacing: 1px;color: white;font-family: 'Dots';border-bottom: dotted;border-width:3px; margin: 15px 0px; font-family: 'Dots'; font-size: 20px; padding-bottom: 3px;">
       Ready to play
     </div>
     <div style="display:flex; flex-wrap: wrap;">
@@ -148,7 +153,7 @@
         </button>
         <div class="gameDesc">
           <strong>HIM Games 3</strong>
-          <div>Lead Programmer & Composer</div>
+          <div style="margin-top:3px;">Lead Programmer & Composer</div>
         </div>
       </div>
       <div>
@@ -171,7 +176,7 @@
       </div>
     </div>
     <div
-      style="border-bottom:dotted;border-width:3px; margin: 15px 0px;font-family: 'Dots'; font-size: 20px;padding-bottom: 3px;">
+      style="letter-spacing: 1px;color: white;border-bottom:dotted;border-width:3px; margin: 15px 0px;font-family: 'Dots'; font-size: 20px;padding-bottom: 3px;">
       Download
     </div>
     <div style="display:flex; flex-wrap: wrap;">
@@ -189,17 +194,17 @@
       </div>
   </template>
 
-  <template id="hg3r-popup">
+  <template id="hg3r-popup" data-background="url('../assets/images/GamePaper.png')">
     <iframe height=624 width=816 style="float:middle"
       src=https://pub-82f17d419ef34043973f014068861a94.r2.dev/index.html></iframe>
   </template>
 
-  <template id="TOOSLOW-popup">
+  <template id="TOOSLOW-popup" data-background="url('../assets/images/GamePaper.png')">
     <iframe height=700 width=1024 style="float:middle"
       src=https://aidankhan51.github.io/CreativeComputation/Art-jam/Art-Jam-project></iframe>
   </template>
 
-  <template id="GAMBLE-popup">
+  <template id="GAMBLE-popup" data-background="url('../assets/images/GamePaper.png')">
     <iframe height=800 width=640 style="float:middle"
       src=https://aidankhan51.github.io/CreativeComputation/GambleGambleGamble></iframe>
   </template>

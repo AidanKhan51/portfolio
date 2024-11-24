@@ -183,8 +183,7 @@ body {
 }
 
 .closeButton:hover {
-  border-style: solid;
-  border-color: red;
+  filter: brightness(0.8);
 }
 
 .gameDesc {
@@ -197,6 +196,8 @@ body {
   border-width: 2px;
   width: 115px;
   text-align: center;
+  color: white;
+  letter-spacing: 1px
 }
 
 .appText {
@@ -240,6 +241,10 @@ body {
   cursor: pointer;
 }
 
+.gameBtn:hover {
+  filter: brightness(0.8)
+}
+
 .drawings {
   width: 200px;
   height: 200px;
@@ -281,4 +286,12 @@ body {
 ::-webkit-scrollbar-thumb:active {
   background: rgb(185, 185, 185);
   cursor: grabbing;
+}
+
+.socials {
+  margin: 5px;
+}
+
+.socials:hover {
+  filter: brightness(0)
 }

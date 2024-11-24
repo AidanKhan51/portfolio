@@ -43,8 +43,8 @@ function makePopup(contentId) {
 	opened.set(contentId, popup);
 	initializers[contentId]?.()
 
-	popup.style.top = Math.floor(Math.random() * 250) + 125 + 'px';
-	popup.style.left = Math.floor(Math.random() * 880) + 440 + 'px';
+	popup.style.top = Math.floor(Math.random() * 400) + 100 + 'px';
+	popup.style.left = Math.floor(Math.random() * 900) + 300 + 'px';
 
 	registerResizer(popup, '.top-bar', e => {
 		const offsets = popup.getBoundingClientRect();
