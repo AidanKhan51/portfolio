@@ -1,1 +1,0 @@
-I actually swear I did this but it's spread over like, a google doc, a note on my phone and multiple random notebook pages and pretty incoherent

@@ -1,4 +1,0 @@
-# Starting points
-
-
-GAMBLING!!!
