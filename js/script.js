@@ -6,6 +6,7 @@
 "use strict";
 
 const opened = new Map();
+let audio;
 
 const initializers = {
 	'games-popup': () => {
@@ -59,6 +60,9 @@ function makePopup(contentId) {
 
 	// Change to add listener to button
 	popup.querySelector('.closeButton').addEventListener('click', () => {
+		if (contentId == 'music-popup') {
+			if (audio) audio.pause();
+		}
 		opened.delete(contentId);
 		popup.remove();
 	});
@@ -166,6 +170,106 @@ function makePopup(contentId) {
 
 		popup.style.height = (popup.clientHeight + movementY) + 'px';
 	});
+
+	const timeline = document.querySelector('.timeline');
+	if (contentId == 'music-popup') {
+		const changeText = document.querySelector("#change-text");
+
+		const coverToggle = document.querySelector('.icon-container'),
+			flagDay = `<img id="disc" src="assets/images/FDdisc.png" class="audio-icon">`,
+			catwalk = `<img id="disc" src="assets/images/POTRdisc.png" class="audio-icon">`,
+			crusade = `<img id="disc" src="assets/images/HGDisc.png" class="audio-icon">`;
+
+		document.getElementById('flagday-btn').addEventListener('click', () => {
+			coverToggle.innerHTML = flagDay;
+			if (audio) audio.pause();
+			audio = new Audio('assets/sounds/Flag Day.mp3');
+			toggleAudio();
+			audio.onended = audioEnded;
+			audio.ontimeupdate = changeTimelinePosition;
+			changeText.textContent = "Flag Day is a song originally written in 1986 by British indie pop band The Housemartins. This song is a particular favourite of mine from my childhood. It remains a niche single, making resources to create this cover with extremely scarce. Besides a four-note chord progression, everything I transposed had to be done completely by ear. Special thanks to Bridgit O'Leary for performing the vocal melody. This project wouldn't be the same without it."
+		});
+
+		document.getElementById('catwalk-btn').addEventListener('click', () => {
+			coverToggle.innerHTML = catwalk;
+			if (audio) audio.pause();
+			audio = new Audio('assets/sounds/Catwalk.mp3');
+			toggleAudio();
+			audio.onended = audioEnded;
+			audio.ontimeupdate = changeTimelinePosition;
+			changeText.textContent = "This is a song I created for a mobile game named 'Plushies on the run'. It's a short jingle played at the gacha machine where you exchange in-game currency for new characters. I created it with that theme in mind, using instruments that emulated that Casino feeling.";
+		});
+
+		document.getElementById('hg-btn').addEventListener('click', () => {
+			coverToggle.innerHTML = crusade;
+			if (audio) audio.pause();
+			audio = new Audio('assets/sounds/Crusade.mp3');
+			toggleAudio();
+			audio.onended = audioEnded;
+			audio.ontimeupdate = changeTimelinePosition;
+			changeText.textContent = "'Crusade' is a track I created in early 2022 for a game I was working on. Despite my lack of experience in music at the time, I still think it had some excellent ideas. For context, the song worked as a battle theme for the earlier section of my game, which is a winter forest.";
+		});
+
+
+
+		const playerButton = document.querySelector('.player-button'),
+			playIcon = `<img style="height: 25px; width: 25px;" src="assets/images/jerma.png">`,
+			pauseIcon = `<img style="height: 25px; width: 25px;" src="assets/images/Hylics.png">`;
+
+		function toggleAudio() {
+			if (audio.paused) {
+				audio.play();
+				rotateDisc();
+
+				playerButton.innerHTML = pauseIcon;
+			} else {
+				audio.pause();
+				stopDisc();
+				playerButton.innerHTML = playIcon;
+			}
+		}
+
+		playerButton.addEventListener('click', toggleAudio);
+
+		function audioEnded() {
+			playerButton.innerHTML = playIcon;
+		}
+
+
+		function rotateDisc() {
+			document.getElementById("disc").classList.add("icon-rotate")
+		};
+
+		function stopDisc() {
+			document.getElementById("disc").classList.remove("icon-rotate")
+		};
+
+		function changeTimelinePosition() {
+			const percentagePosition = (100 * audio.currentTime) / audio.duration;
+			timeline.style.backgroundSize = `${percentagePosition}% 100%`;
+			timeline.value = percentagePosition;
+		}
+	}
+
+	function changeSeek() {
+		const time = (timeline.value * audio.duration) / 100;
+		audio.currentTime = time;
+	}
+
+	timeline.addEventListener('change', changeSeek);
+
+	const soundButton = document.querySelector('.sound-button'),
+		soundIcon = `
+						<img style="height: 25px; width: 25px;" src="assets/images/jerma.png">`,
+		muteIcon = `
+							<img style="height: 25px; width: 25px;" src="assets/images/Hylics.png">`;
+
+	function toggleSound() {
+		audio.muted = !audio.muted;
+		soundButton.innerHTML = audio.muted ? muteIcon : soundIcon;
+	}
+
+	soundButton.addEventListener('click', toggleSound);
 }
 
 // Popup commands from homepage
