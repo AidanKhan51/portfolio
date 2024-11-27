@@ -62,6 +62,7 @@ function makePopup(contentId) {
 	popup.querySelector('.closeButton').addEventListener('click', () => {
 		if (contentId == 'music-popup') {
 			if (audio) audio.pause();
+			audio = undefined;
 		}
 		opened.delete(contentId);
 		popup.remove();

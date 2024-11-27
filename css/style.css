@@ -301,6 +301,7 @@ body {
   width: 125px;
   height: 125px;
   color: black;
+  background: grey;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,7 +349,6 @@ body {
 }
 
 .timeline {
-
   height: 15px;
   background-color: #e5e5e5;
   border: solid, 1px, black;
