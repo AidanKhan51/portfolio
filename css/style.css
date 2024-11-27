@@ -349,7 +349,7 @@ body {
 }
 
 .timeline {
-  -webkit-appearance: none;
+  appearance: none;
   height: 15px;
   background-color: #e5e5e5;
   border: solid, 1px, black;
