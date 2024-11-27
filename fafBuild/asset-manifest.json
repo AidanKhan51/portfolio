@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fafBuild/static/css/main.e6c13ad2.css",
-    "main.js": "/fafBuild/static/js/main.b0d65df4.js",
+    "main.js": "/fafBuild/static/js/main.e65986ff.js",
     "static/js/453.419a5d54.chunk.js": "/fafBuild/static/js/453.419a5d54.chunk.js",
     "index.html": "/fafBuild/index.html",
     "main.e6c13ad2.css.map": "/fafBuild/static/css/main.e6c13ad2.css.map",
-    "main.b0d65df4.js.map": "/fafBuild/static/js/main.b0d65df4.js.map",
+    "main.e65986ff.js.map": "/fafBuild/static/js/main.e65986ff.js.map",
     "453.419a5d54.chunk.js.map": "/fafBuild/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.b0d65df4.js"
+    "static/js/main.e65986ff.js"
   ]
 }
