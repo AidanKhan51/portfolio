@@ -348,7 +348,7 @@ body {
 }
 
 .timeline {
-  -webkit-appearance: none;
+
   height: 15px;
   background-color: #e5e5e5;
   border: solid, 1px, black;
@@ -429,4 +429,10 @@ body {
   max-width: 359px;
   padding: 5px 10px 5px 10px;
   font-size: 15px;
+}
+
+.track-selector {
+  float: left;
+  height: 16px;
+  width: 16px;
 }
