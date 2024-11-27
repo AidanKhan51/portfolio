@@ -171,6 +171,59 @@ function makePopup(contentId) {
 
 		popup.style.height = (popup.clientHeight + movementY) + 'px';
 	});
+	if (contentId == '2d-popup') {
+		const correctnessBtn = document.getElementById('correctness');
+		const hylicsBtn = document.getElementById('hylics');
+		const infestBtn = document.getElementById('infestation');
+		const illustDiv = document.getElementById('illustration-panel');
+		const backBtn = document.getElementById('back');
+
+		function correctnessChange() {
+			illustDiv.innerHTML = '<div>eeyikes</div>';
+		}
+		function hylicsChange() {
+			illustDiv.innerHTML = '<div>eeyikes2</div>';
+		}
+		function infestChange() {
+			illustDiv.innerHTML = '<div><button id="back">sus</button></div>';
+		}
+
+		function illustBack() {
+			illustDiv.innerHTML = 'back!';
+		}
+
+		correctnessBtn.addEventListener('click', correctnessChange);
+		hylicsBtn.addEventListener('click', hylicsChange);
+		infestBtn.addEventListener('click', infestChange);
+		backBtn.addEventListener('click', illustBack);
+	}
+
+	if (contentId == 'hg3r-popup') {
+		const hgButton = document.getElementById('hg-desc');
+		const hgDiv = document.getElementById('hg');
+		function changeContent() {
+			hgDiv.innerHTML = ' <iframe height=624 width=816 style="float:middle" src = https://pub-82f17d419ef34043973f014068861a94.r2.dev/index.html></iframe>';
+		}
+		hgButton.addEventListener('click', changeContent);
+	}
+
+	if (contentId == 'TOOSLOW-popup') {
+		const tooslowButton = document.getElementById('tooslow-desc');
+		const tooslowDiv = document.getElementById('tooslow');
+		function changeContent() {
+			tooslowDiv.innerHTML = ' <iframe height=700 width=1024 style="float:middle" src = https://aidankhan51.github.io/CreativeComputation/Art-jam/Art-Jam-project></iframe>';
+		}
+		tooslowButton.addEventListener('click', changeContent);
+	}
+
+	if (contentId == 'GAMBLE-popup') {
+		const gambleButton = document.getElementById('gamble-desc');
+		const gambleDiv = document.getElementById('gamble');
+		function changeContent() {
+			gambleDiv.innerHTML = '  <iframe height=800 width=640 style="float:middle" src = https://aidankhan51.github.io/CreativeComputation/GambleGambleGamble></iframe>';
+		}
+		gambleButton.addEventListener('click', changeContent);
+	}
 
 	const timeline = document.querySelector('.timeline');
 	if (contentId == 'music-popup') {

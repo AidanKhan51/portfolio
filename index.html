@@ -49,44 +49,49 @@
   </template>
 
   <template id="2d-popup">
-    <div style="border-style: solid; border-width: 1px">
-      <div style="text-align: center;font-family: 'Hidro'; font-size: 60px;">Illustrations
+    <div id="illustration-panel">
+      <div style="border-style: solid; border-width: 1px">
+        <div style="text-align: center;font-family: 'Hidro'; font-size: 60px;">Illustrations
+        </div>
+        <div></div>
       </div>
-      <div></div>
-    </div>
-    <div class="img-grid" style="border-style: solid; border-width: 1px; padding: 5px; min-width: 700px">
-      <div>
-        <button id='correctness' class="drawings"
-          style="background-image: url('assets/images/Correctness.jpg'); background-size: cover">
-        </button>
-        <div class="illust-text">Correctness</div>
-      </div>
-      <div>
-        <button id='hylics' class="drawings"
-          style="background-image: url('assets/images/Hylics.png'); background-size: cover;">
-        </button>
-        <div class="illust-text">Hylics</div>
-      </div>
-      <div>
-        <button id='infestation' class="drawings"
-          style="background-image: url('assets/images/Infest.png'); background-size: cover">
-        </button>
-        <div class="illust-text">Infestation</div>
-      </div>
-      <div>
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BNWRhNzgxNzQtODk5ZC00OWQ0LWI5ZTktNjhmMmU5MGIzODE2XkEyXkFqcGc@._V1_.jpg"
-          alt="drawing" width="200" height="200">
-      </div>
-      <div>
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BNWRhNzgxNzQtODk5ZC00OWQ0LWI5ZTktNjhmMmU5MGIzODE2XkEyXkFqcGc@._V1_.jpg"
-          alt="drawing" width="200" height="200">
-      </div>
-      <div>
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BNWRhNzgxNzQtODk5ZC00OWQ0LWI5ZTktNjhmMmU5MGIzODE2XkEyXkFqcGc@._V1_.jpg"
-          alt="drawing" width="200" height="200">
+      <div class="img-grid" style="border-style: solid; border-width: 1px; padding: 5px; min-width: 700px">
+        <div>
+          <button id='correctness' class="drawings"
+            style="background-image: url('assets/images/Correctness.jpg'); background-size: cover">
+          </button>
+          <div class="illust-text">Correctness</div>
+        </div>
+        <div>
+          <button id='hylics' class="drawings"
+            style="background-image: url('assets/images/Hylics.png'); background-size: cover;">
+          </button>
+          <div class="illust-text">Hylics</div>
+        </div>
+        <div>
+          <button id='infestation' class="drawings"
+            style="background-image: url('assets/images/Infest.png'); background-size: cover">
+          </button>
+          <div class="illust-text">Infestation</div>
+        </div>
+        <div>
+          <button id='correctness' class="drawings"
+            style="background-image: url('assets/images/jerma.png'); background-size: cover">
+          </button>
+          <div class="illust-text">Coming Soon</div>
+        </div>
+        <div>
+          <button id='correctness' class="drawings"
+            style="background-image: url('assets/images/jerma.png'); background-size: cover">
+          </button>
+          <div class="illust-text">Coming Soon</div>
+        </div>
+        <div>
+          <button id='correctness' class="drawings"
+            style="background-image: url('assets/images/jerma.png'); background-size: cover">
+          </button>
+          <div class="illust-text">Coming Soon</div>
+        </div>
       </div>
     </div>
   </template>
@@ -134,7 +139,7 @@
   <template id="music-popup">
     <div style="margin: 5px; text-align: center; font-family: 'Hidro'; font-size: 60px; min-width: 374px;">Music</div>
     <div
-      style="margin-left: 5px; margin-right: 5px; flex:display;flex-direction:row; text-align: center; align-items: center; justify-content: center; padding:0px 3px 0px 3px; min-width: 371px;">
+      style="font-family: 'Hidro'; margin-left: 5px; margin-right: 5px; flex:display;flex-direction:row; text-align: center; align-items: center; justify-content: center; padding:0px 3px 0px 3px; min-width: 371px;">
       <div style="float: left;">Track</div>
       <div style="float: right;">Length</div>
       <div>Artist </div>
@@ -142,21 +147,21 @@
     <div
       style="border: solid 1px black; margin: 5px; margin-top: 0px; min-width: 374px; overflow-y: scroll; overflow-x: hidden; max-height:120px;">
       <div class="tracks">
-        <button id="flagday-btn" style="float: left; height: 16px; width: 16px;"></button>
+        <button id="flagday-btn" class='track-selector'></button>
         <div style="float: left; margin-left: 5px;"> Flag Day </div>
-        <div style="float: right;"> 3:22</div>
+        <div style="float: right;"> 3m 22</div>
         <div style> Aidan Khan, Bridgit O'Leary</div>
       </div>
       <div class="tracks">
         <button id="catwalk-btn" class='track-selector'></button>
         <div style="float: left; margin-left: 5px;"> Catwalk </div>
-        <div style="float: right;"> 0:50</div>
+        <div style="float: right;"> 0m 50</div>
         <div style> Aidan Khan</div>
       </div>
       <div class="tracks">
-        <button id="hg-btn" style="float: left; height: 16px; width: 16px;"></button>
+        <button id="hg-btn" class='track-selector'></button>
         <div style="float: left; margin-left: 5px;"> Crusade </div>
-        <div style="float: right;"> 2:40</div>
+        <div style="float: right;"> 2m 40</div>
         <div style> Aidan Khan</div>
       </div>
     </div>
@@ -244,18 +249,33 @@
   </template>
 
   <template id="hg3r-popup" data-background="url('../assets/images/GamePaper.png')">
-    <iframe height=624 width=816 style="float:middle"
-      src=https://pub-82f17d419ef34043973f014068861a94.r2.dev/index.html></iframe>
+    <div id="hg" class="game-desc">
+      HIM Games 3
+      <div class="game-desc-small">Here's where I write things about the game</div>
+      <div>
+        <button id="hg-desc" class="game-desc-btn">PLAY!</button>
+      </div>
+    </div>
   </template>
 
   <template id="TOOSLOW-popup" data-background="url('../assets/images/GamePaper.png')">
-    <iframe height=700 width=1024 style="float:middle"
-      src=https://aidankhan51.github.io/CreativeComputation/Art-jam/Art-Jam-project></iframe>
+    <div id="tooslow" class="game-desc">
+      TOO SLOW
+      <div class="game-desc-small">Here's where I write things about the game</div>
+      <div>
+        <button id="tooslow-desc" class="game-desc-btn">PLAY!</button>
+      </div>
+    </div>
   </template>
 
   <template id="GAMBLE-popup" data-background="url('../assets/images/GamePaper.png')">
-    <iframe height=800 width=640 style="float:middle"
-      src=https://aidankhan51.github.io/CreativeComputation/GambleGambleGamble></iframe>
+    <div id="gamble" class="game-desc">
+      GAMBLEGAMBLEGAMBLE
+      <div class="game-desc-small">Here's where I write things about the game</div>
+      <div>
+        <button id="gamble-desc" class="game-desc-btn">PLAY!</button>
+      </div>
+    </div>
   </template>
 
   <template id="bestOf-popup">

@@ -46,6 +46,11 @@ body {
   src: url('../assets/fonts/Hidro.ttf')
 }
 
+@font-face {
+  font-family: 'Ascendant';
+  src: url('../assets/fonts/AscendantLight.otf')
+}
+
 #close-btn,
 #user-btn,
 #twodee-btn,
@@ -251,6 +256,7 @@ body {
   background: black;
   border-style: solid;
   border-width: 4px;
+  cursor: pointer;
 }
 
 .drawings:hover {
@@ -408,6 +414,7 @@ body {
 }
 
 .tracks {
+  font-family: 'Ascendant';
   border-bottom: solid 1px black;
   flex: display;
   padding: 15px 5px 15px 5px;
@@ -416,6 +423,7 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 349px;
+  font-size: 13px;
 }
 
 .stereo {
@@ -425,6 +433,7 @@ body {
 }
 
 .audio-desc {
+  font-family: 'Ascendant';
   margin: 3px;
   border: solid 1px black;
   max-width: 359px;
@@ -434,6 +443,45 @@ body {
 
 .track-selector {
   float: left;
-  height: 16px;
-  width: 16px;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-image: url('../assets/images/jerma.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+.track-selector:hover {
+  filter: brightness(0.8)
+}
+
+.game-desc {
+  text-align: center;
+  color: white;
+  font-family: 'Dots';
+  margin: 10px;
+  font-size: 40px;
+}
+
+.game-desc-small {
+  margin: 10px;
+  font-size: 15px;
+}
+
+.game-desc-btn {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  border: solid 2px black;
+  background: white;
+  color: black;
+  font-family: 'Dots';
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.game-desc-btn:hover {
+  filter: brightness(0.8)
 }
