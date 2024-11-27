@@ -250,19 +250,6 @@ body {
   filter: brightness(0.8)
 }
 
-.drawings {
-  width: 200px;
-  height: 200px;
-  background: black;
-  border-style: solid;
-  border-width: 4px;
-  cursor: pointer;
-}
-
-.drawings:hover {
-  border-color: darkred;
-}
-
 ::-webkit-scrollbar {
   width: 16px
 }
@@ -484,4 +471,81 @@ body {
 
 .game-desc-btn:hover {
   filter: brightness(0.8)
+}
+
+.illust-title {
+  text-align: center;
+  font-family: "Hidro";
+  font-size: 60px;
+}
+
+.illust-desc {
+  font-family: "Hidro";
+  margin: 10px;
+  min-width: 100px;
+  max-width: 500px;
+}
+
+.drawing-one {
+  background-image: url('../assets/images/Correctness.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  border-width: 4px;
+  cursor: pointer;
+}
+
+.drawing-one:hover {
+  border-color: darkred;
+}
+
+.drawing-two {
+  background-image: url('../assets/images/Hylics.png');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  border-width: 4px;
+  cursor: pointer;
+}
+
+.drawing-two:hover {
+  border-color: darkred;
+}
+
+.drawing-three {
+  background-image: url('../assets/images/Infest.png');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  border-width: 4px;
+  cursor: pointer;
+}
+
+.drawing-three:hover {
+  border-color: darkred;
+}
+
+.drawing-tbd {
+  background: black;
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.drawing-tbd:hover {
+  border-color: darkred;
+}
+
+.back-btn {
+  width: 100px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.img-rounder {
+  border-radius: 10%;
 }

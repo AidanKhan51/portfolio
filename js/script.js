@@ -176,26 +176,37 @@ function makePopup(contentId) {
 		const hylicsBtn = document.getElementById('hylics');
 		const infestBtn = document.getElementById('infestation');
 		const illustDiv = document.getElementById('illustration-panel');
-		const backBtn = document.getElementById('back');
 
 		function correctnessChange() {
-			illustDiv.innerHTML = '<div>eeyikes</div>';
+			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn">Return</button> <div class="illust-title">CORRECTNESS</div> </div> <div style="display:flex; flex-direction: row; margin: 5px;"> <div class="illust-desc">words and stuff blah blah blah blah blah</div> <img src="assets/images/Correctness.jpg" height="500px" width="500px" alt="correctness"> </div>';
+			const backBtn = document.getElementById('back');
+			backBtn.addEventListener('click', illustBack);
 		}
 		function hylicsChange() {
-			illustDiv.innerHTML = '<div>eeyikes2</div>';
+			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn">Return</button> <div class="illust-title">Hylics</div> </div> <div style="display:flex; flex-direction: row; margin: 5px;"> <div class="illust-desc">words and stuff blah blah blah blah blah</div> <img class="img-rounder" src="assets/images/Hylics.png" height="500px" width="500px" alt="Hylics"> </div>';
+			const backBtn = document.getElementById('back');
+			backBtn.addEventListener('click', illustBack);
 		}
 		function infestChange() {
-			illustDiv.innerHTML = '<div><button id="back">sus</button></div>';
+			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn">Return</button> <div class="illust-title">Infestation</div> </div> <div style="display:flex; flex-direction: row; margin: 5px;"> <div class="illust-desc">words and stuff blah blah blah blah blah</div> <img src="assets/images/Infest.png" height="500px" width="500px" alt="Infestation"> </div>';
+			const backBtn = document.getElementById('back');
+			backBtn.addEventListener('click', illustBack);
+
 		}
 
 		function illustBack() {
-			illustDiv.innerHTML = 'back!';
+			illustDiv.innerHTML = '<div style="border-style: solid; border-width: 1px"> <div class="illust-title"> Illustrations</div><div></div></div ><div class="img-grid" style = "border-style: solid; border-width: 1px; padding: 5px; min-width: 700px"><div><button id="correctness" class="drawing-one"></button><div class="illust-text">Correctness</div></div><div><button id="hylics" class="drawing-two"></button ><div class="illust-text" > Hylics</div ></div ><div><button id="infestation" class="drawing-three"></button><div class="illust-text">Infestation</div></div><div><button id="tbd" class="drawing-tbd"></button><div class="illust-text">Coming Soon</div></div><div><button id="tbd" class="drawing-tbd"></button><div class="illust-text">Coming Soon</div></div><div><button id="tbd" class="drawing-tbd"></button><div class="illust-text">Coming Soon</div></div></div>'
+			const correctnessBtn2 = document.getElementById('correctness');
+			const hylicsBtn2 = document.getElementById('hylics');
+			const infestBtn2 = document.getElementById('infestation');
+			correctnessBtn2.addEventListener('click', correctnessChange);
+			hylicsBtn2.addEventListener('click', hylicsChange);
+			infestBtn2.addEventListener('click', infestChange);
 		}
 
 		correctnessBtn.addEventListener('click', correctnessChange);
 		hylicsBtn.addEventListener('click', hylicsChange);
 		infestBtn.addEventListener('click', infestChange);
-		backBtn.addEventListener('click', illustBack);
 	}
 
 	if (contentId == 'hg3r-popup') {
