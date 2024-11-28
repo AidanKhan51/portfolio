@@ -25,6 +25,14 @@ const initializers = {
 	}
 }
 
+const modelInitializers = {
+	'3d-popup': () => {
+		document.getElementById('Fafnir-btn').addEventListener('click', () => {
+			makePopup('Fafnir-popup');
+		});
+	}
+}
+
 function makePopup(contentId) {
 	if (opened.has(contentId)) {
 		opened.get(contentId).remove();
@@ -43,6 +51,7 @@ function makePopup(contentId) {
 	document.body.append(popup);
 	opened.set(contentId, popup);
 	initializers[contentId]?.()
+	modelInitializers[contentId]?.()
 
 	popup.style.top = Math.floor(Math.random() * 400) + 100 + 'px';
 	popup.style.left = Math.floor(Math.random() * 900) + 300 + 'px';
