@@ -128,7 +128,7 @@ body {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 3em;
+  margin: 1em;
   gap: 1em;
 }
 
@@ -223,6 +223,7 @@ body {
   text-align: center;
   align-content: center;
   font-size: 20px;
+  color: white;
 }
 
 .buttonBg {
@@ -460,7 +461,8 @@ body {
   width: 100px;
   height: 40px;
   margin: 10px;
-  border: solid 2px black;
+  border: dotted 3px black;
+  border-radius: 5px;
   background: white;
   color: black;
   font-family: 'Dots';
@@ -477,13 +479,23 @@ body {
   text-align: center;
   font-family: "Hidro";
   font-size: 60px;
+  min-width: 920px;
+  color: white;
+}
+
+.illust-subtitle {
+  font-family: "Hidro";
+  font-size: 60px;
+  color: white;
 }
 
 .illust-desc {
   font-family: "Hidro";
   margin: 10px;
-  min-width: 100px;
+  min-width: 155px;
   max-width: 500px;
+  color: white;
+  line-height: 1.5;
 }
 
 .drawing-one {
@@ -491,13 +503,13 @@ body {
   background-size: cover;
   width: 200px;
   height: 200px;
-  border-style: solid;
-  border-width: 4px;
   cursor: pointer;
+  border-radius: 5px;
+  border-style: none;
 }
 
-.drawing-one:hover {
-  border-color: darkred;
+.frame-one:hover {
+  background-image: url('../assets/images/frameGold.png');
 }
 
 .drawing-two {
@@ -505,13 +517,13 @@ body {
   background-size: cover;
   width: 200px;
   height: 200px;
-  border-style: solid;
-  border-width: 4px;
   cursor: pointer;
+  border-radius: 5px;
+  border-style: none;
 }
 
-.drawing-two:hover {
-  border-color: darkred;
+.frame-two:hover {
+  background-image: url('../assets/images/frameGold.png');
 }
 
 .drawing-three {
@@ -519,13 +531,28 @@ body {
   background-size: cover;
   width: 200px;
   height: 200px;
-  border-style: solid;
-  border-width: 4px;
   cursor: pointer;
+  border-radius: 5px;
+  border-style: none;
 }
 
-.drawing-three:hover {
-  border-color: darkred;
+.frame-three:hover {
+  background-image: url('../assets/images/frameGold.png');
+}
+
+.drawing-four {
+  background-image: url('../assets/images/BoysDontCry.jpg');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-color: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.frame-four:hover {
+  background-image: url('../assets/images/frameGold.png');
 }
 
 
@@ -533,18 +560,31 @@ body {
   background: black;
   width: 200px;
   height: 200px;
-  border-style: solid;
-  border-width: 4px;
+  color: white;
+  font-family: 'Hidro';
+  font-size: 50px;
+  border-radius: 5px;
 }
 
-.drawing-tbd:hover {
-  border-color: darkred;
+.frame-tbd:hover {
+  background-image: url('../assets/images/frameGold.png');
 }
 
 .back-btn {
-  width: 100px;
+  width: 50px;
   height: 50px;
   margin-right: 20px;
+  background-image: url('../assets/images/back.png');
+  background-repeat: no-repeat;
+  background-size: 95% 95%;
+  border: none;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.back-btn:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
 }
 
 .img-rounder {
@@ -559,4 +599,44 @@ body {
 
 .jump:hover {
   transform: scale(1.2);
+}
+
+.frame-one {
+  background-image: url('../assets/images/frame.png');
+  background-repeat: no-repeat;
+  background-size: 97% 94%;
+  padding: 30px;
+  background-position: center;
+}
+
+.frame-two {
+  background-image: url('../assets/images/frame.png');
+  background-repeat: no-repeat;
+  background-size: 97% 94%;
+  padding: 30px;
+  background-position: center;
+}
+
+.frame-three {
+  background-image: url('../assets/images/frame.png');
+  background-repeat: no-repeat;
+  background-size: 97% 94%;
+  padding: 30px;
+  background-position: center;
+}
+
+.frame-four {
+  background-image: url('../assets/images/frame.png');
+  background-repeat: no-repeat;
+  background-size: 97% 94%;
+  padding: 30px;
+  background-position: center;
+}
+
+.frame-tbd {
+  background-image: url('../assets/images/frame.png');
+  background-repeat: no-repeat;
+  background-size: 97% 94%;
+  padding: 30px;
+  background-position: center;
 }

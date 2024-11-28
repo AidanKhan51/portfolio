@@ -184,38 +184,47 @@ function makePopup(contentId) {
 		const correctnessBtn = document.getElementById('correctness');
 		const hylicsBtn = document.getElementById('hylics');
 		const infestBtn = document.getElementById('infestation');
+		const bdcBtn = document.getElementById('bdc');
 		const illustDiv = document.getElementById('illustration-panel');
 
 		function correctnessChange() {
-			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn">Return</button> <div class="illust-title">CORRECTNESS</div> </div> <div style="display:flex; flex-direction: row; margin: 5px;"> <div class="illust-desc">words and stuff blah blah blah blah blah</div> <img src="assets/images/Correctness.jpg" height="500px" width="500px" alt="correctness"> </div>';
+			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn"></button> <div class="illust-subtitle">CORRECTNESS</div> </div> <div style="display:flex; flex-direction: row; margin: 5px; max-width: 750px;"> <div class="illust-desc"><strong>Program: Clip Studio Paint<br> Created: October 2023</strong><br><br> This piece is inspired by a game named "The 25th Ward: The Silver Case", a game which includes themes of individuality and urban society. The idea behind "CORRECTNESS" is to create a type of stylized film poster to represent one of the three storylines in the game. <br><br>To create a dramatic and stylized look, I primarily used 3 colours. Black and white were used in tandem to create shapes and shadows with empty space, while the red was used to add more detail and energy.</div> <img class="img-rounder" src="assets/images/Correctness.jpg" height="500px" width="500px" alt="correctness"> </div>';
 			const backBtn = document.getElementById('back');
 			backBtn.addEventListener('click', illustBack);
 		}
 		function hylicsChange() {
-			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn">Return</button> <div class="illust-title">Hylics</div> </div> <div style="display:flex; flex-direction: row; margin: 5px;"> <div class="illust-desc">words and stuff blah blah blah blah blah</div> <img class="img-rounder" src="assets/images/Hylics.png" height="500px" width="500px" alt="Hylics"> </div>';
+			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn"></button> <div class="illust-subtitle">Hylics</div> </div> <div style="display:flex; flex-direction: row; margin: 5px; max-width: 750px;"> <div class="illust-desc"><strong>Program: Clip Studio Paint <br> Created January 2023</strong><br><br>This piece is inspired by Hylics, a game made out of 3d scanned clay. I also looked towards gnostic philosophy when describing the themes of the game.<br><br>I wanted to capture the idea of the Demiurge, a craftsman/artisan who is the creator of the material world and creates it through music. In the background, you can see clouds of stardust begin to take shape, as the slow bass riff manipulates physical matter. </div> <img class="img-rounder" src="assets/images/Hylics.png" height="500px" width="500px" alt="Hylics"> </div>';
 			const backBtn = document.getElementById('back');
 			backBtn.addEventListener('click', illustBack);
 		}
 		function infestChange() {
-			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn">Return</button> <div class="illust-title">Infestation</div> </div> <div style="display:flex; flex-direction: row; margin: 5px;"> <div class="illust-desc">words and stuff blah blah blah blah blah</div> <img src="assets/images/Infest.png" height="500px" width="500px" alt="Infestation"> </div>';
+			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn"></button> <div class="illust-subtitle">Infestation</div> </div> <div style="display:flex; flex-direction: row; margin: 5px; max-width: 750px;"> <div class="illust-desc"><strong>Program: Clip Studio Paint<br> Created May 2023</strong><br><br> This piece, inspired by Lovecraft, was a sketch that quickly spiraled out of control. It depicts a mutated draconic creature"s head, with tendrils from some sort of cephalopod spilling out.<br><br> There"s a real horror to being eaten alive from the inside by another creature that I was trying to explore here, a process that has parallels in real-life ecosystems. It"s these real-life parallels that make bio-horror so intriguing to me.</div> <img class="img-rounder" src="assets/images/Infest.png" height="500px" width="500px" alt="Infestation"> </div>';
 			const backBtn = document.getElementById('back');
 			backBtn.addEventListener('click', illustBack);
 
 		}
+		function bdcChange() {
+			illustDiv.innerHTML = '<div style="display:flex; flex-direction: row; margin: 5px;align-items: center;"> <button id="back" class="back-btn"></button> <div class="illust-subtitle">Boys Don"t Cry</div> </div> <div style="display:flex; flex-direction: row; margin: 5px; max-width: 750px;"> <div class="illust-desc"><strong>Program: Clip Studio Paint <br> Created March 2023</strong><br><br>This piece is a scene also from "The 25th Ward", from a chapter named "Boys Don"t Cry". In the game, this scene is when one of the main characters finally snaps.<br><br> I used extreme values of black and white to create a ghastly, silhouette-like image to emphasize the character"s humanity draining. The blood on jacket creates an incredibly strong contrast to highlight the weight of violence, and frames the character"s silhouette. </div> <img class="img-rounder" src="assets/images/BoysDontCry.jpg" height="500px" width="550px" alt="Hylics"> </div>';
+			const backBtn = document.getElementById('back');
+			backBtn.addEventListener('click', illustBack);
+		}
 
 		function illustBack() {
-			illustDiv.innerHTML = '<div style="border-style: solid; border-width: 1px"> <div class="illust-title"> Illustrations</div><div></div></div ><div class="img-grid" style = "border-style: solid; border-width: 1px; padding: 5px; min-width: 700px"><div><button id="correctness" class="drawing-one"></button><div class="illust-text">Correctness</div></div><div><button id="hylics" class="drawing-two"></button ><div class="illust-text" > Hylics</div ></div ><div><button id="infestation" class="drawing-three"></button><div class="illust-text">Infestation</div></div><div><button id="tbd" class="drawing-tbd"></button><div class="illust-text">Coming Soon</div></div><div><button id="tbd" class="drawing-tbd"></button><div class="illust-text">Coming Soon</div></div><div><button id="tbd" class="drawing-tbd"></button><div class="illust-text">Coming Soon</div></div></div>'
+			illustDiv.innerHTML = '<div id="illustration-panel"> <div> <div class="illust-title">Illustrations </div> <div></div> </div> <div class="img-grid" style="padding: 5px;"> <div> <div class="frame-one"> <button id="correctness" class="drawing-one"> </button> </div> <div class="illust-text">Correctness</div> </div> <div> <div class="frame-two"> <button id="hylics" class="drawing-two"> </button> </div> <div class="illust-text">Hylics</div> </div> <div> <div class="frame-three"> <button id="infestation" class="drawing-three"> </button> </div> <div class="illust-text">Infestation</div> </div> <div> <div class="frame-four"> <button id="bdc" class="drawing-four"> </button> </div> <div class="illust-text">Boys Dont Cry </div> </div> <div> <div class="frame-tbd"> <button id="tbd" class="drawing-tbd"> ?</button> </div> <div class="illust-text">Coming Soon</div> </div> <div> <div class="frame-tbd"> <button id="tbd" class="drawing-tbd"> ?</button> </div> <div class="illust-text">Coming Soon</div> </div> </div> </div>'
 			const correctnessBtn2 = document.getElementById('correctness');
 			const hylicsBtn2 = document.getElementById('hylics');
 			const infestBtn2 = document.getElementById('infestation');
+			const bdcBtn2 = document.getElementById('bdc');
 			correctnessBtn2.addEventListener('click', correctnessChange);
 			hylicsBtn2.addEventListener('click', hylicsChange);
 			infestBtn2.addEventListener('click', infestChange);
+			bdcBtn2.addEventListener('click', bdcChange);
 		}
 
 		correctnessBtn.addEventListener('click', correctnessChange);
 		hylicsBtn.addEventListener('click', hylicsChange);
 		infestBtn.addEventListener('click', infestChange);
+		bdcBtn.addEventListener('click', bdcChange);
 	}
 
 	if (contentId == 'hg3r-popup') {
@@ -271,7 +280,7 @@ function makePopup(contentId) {
 			toggleAudio();
 			audio.onended = audioEnded;
 			audio.ontimeupdate = changeTimelinePosition;
-			changeText.textContent = "This is a song I created for a mobile game named 'Plushies on the run'. It's a short jingle played at the gacha machine where you exchange in-game currency for new characters. I created it with that theme in mind, using instruments that emulated that Casino feeling.";
+			changeText.textContent = "This is a song I created for a mobile game named 'Plushies on the run'. It's a short jingle played at the gacha machine where you exchange in-game currency for new characters. I created it with that theme in mind, using instruments that emulate a Casino feeling.";
 		});
 
 		document.getElementById('hg-btn').addEventListener('click', () => {

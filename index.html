@@ -48,42 +48,55 @@
 
   </template>
 
-  <template id="2d-popup">
+  <template id="2d-popup" data-background="black">
     <div id="illustration-panel">
-      <div style="border-style: solid; border-width: 1px">
+      <div>
         <div class="illust-title">Illustrations
         </div>
         <div></div>
       </div>
-      <div class="img-grid" style="border-style: solid; border-width: 1px; padding: 5px; min-width: 700px">
+      <div class="img-grid" style="padding: 5px;">
         <div>
-          <button id='correctness' class="drawing-one">
-          </button>
+          <div class="frame-one">
+            <button id='correctness' class="drawing-one">
+            </button>
+          </div>
           <div class="illust-text">Correctness</div>
         </div>
         <div>
-          <button id='hylics' class="drawing-two">
-          </button>
+          <div class="frame-two">
+            <button id='hylics' class="drawing-two">
+            </button>
+          </div>
           <div class="illust-text">Hylics</div>
         </div>
         <div>
-          <button id='infestation' class="drawing-three">
-          </button>
+          <div class="frame-three">
+            <button id='infestation' class="drawing-three">
+            </button>
+          </div>
           <div class="illust-text">Infestation</div>
         </div>
         <div>
-          <button id='correctness' class="drawing-tbd">
-          </button>
+          <div class="frame-four">
+            <button id='bdc' class="drawing-four">
+            </button>
+          </div>
+          <div class="illust-text">Boys Dont Cry
+          </div>
+        </div>
+        <div>
+          <div class="frame-tbd">
+            <button id='correctness' class="drawing-tbd">
+              ?</button>
+          </div>
           <div class="illust-text">Coming Soon</div>
         </div>
         <div>
-          <button id='correctness' class="drawing-tbd">
-          </button>
-          <div class="illust-text">Coming Soon</div>
-        </div>
-        <div>
-          <button id='correctness' class="drawing-tbd">
-          </button>
+          <div class="frame-tbd">
+            <button id='correctness' class="drawing-tbd">
+              ?</button>
+          </div>
           <div class="illust-text">Coming Soon</div>
         </div>
       </div>
@@ -127,11 +140,18 @@
 
   <template id="3d-popup">
     <div style="text-align: center; font-size: 30px; margin: 10px;">3D</div>
-    <button class="jump" id="Fafnir-btn">Fafnir</button>
+    <div>
+      <button class="jump" id="Fafnir-btn"></button>
+      <div style="text-align: center; height:100px; width: 80px; margin:10px;">Fafnir</div>
+    </div>
+    <div>
+      <button class="jump"></button>
+      <div style="text-align: center; height:100px; width: 80px; margin:10px;">Culminating</div>
+    </div>
   </template>
 
   <template id="Fafnir-popup">
-    <iframe height=624 width=816 style="float:middle; border: none; cursor: grab;"
+    <iframe height=500 width=624 style="float:middle; border: none; cursor: grab;"
       src="https://aidankhan51.github.io/FafnirModel/"></iframe>
   </template>
 
@@ -278,8 +298,8 @@
   </template>
 
   <template id="bestOf-popup">
-    <h2>Best of</h2>
-    <h3>Work In Progress!</h3>
+    <h2 style="text-align: center;">Best of</h2>
+    <h3 style="text-align: center;">Work In Progress!</h3>
   </template>
 
 
