@@ -16,12 +16,6 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Aidan Khan Portfolio">
   <meta property="og:description" content="AVAILABLE NOW at select stores near you! Batteries sold separately.">
-  <!-- Library script(s) -->
-
-  <!-- p5.min.js is the main p5 library -->
-  <!-- <script src="js/libraries/p5.min.js"></script> -->
-  <!-- p5.sound.min.js allows us to use sound -->
-  <!-- <script src="js/libraries/p5.sound.min.js"></script> -->
 
   <!-- My script(s) -->
   <script src="js/script.js"></script>
@@ -30,40 +24,49 @@
 <!-- popups -->
 
 <body>
+  <!--template id for popup-->
   <template id="popup-base">
-
+    <!--classes for every border of popup window, important for resizing the popups-->
     <div class="nw-corner"></div>
     <div class="north-border"></div>
     <div class="ne-corner"></div>
     <div class="west-border"></div>
+    <!--body of popup-->
     <div class="popup-center">
+      <!--Top bar for moving popup-->
       <div class="top-bar"><button id="close-btn" class="closeButton"></button></div>
+      <!--where main content is stored-->
       <div class="content-cnt"></div>
     </div>
     <div class="east-border"></div>
     <div class="sw-corner"></div>
     <div class="south-border"></div>
     <div class="se-corner"></div>
-
-
   </template>
 
+  <!--popup for illustrations section-->
+  <!--custom popup background set to black-->
   <template id="2d-popup" data-background="black">
+    <!--id to change content on popup page to one of the drawings, or back to the main Illustration page-->
     <div id="illustration-panel">
       <div>
         <div class="illust-title">Illustrations
         </div>
         <div></div>
       </div>
+      <!--grid for images-->
       <div class="img-grid" style="padding: 5px;">
         <div>
+          <!--class "frame one" is the first photo frame-->
           <div class="frame-one">
+            <!--button id to trigger innerHTML change under id="illustration-panel"-->
             <button id='correctness' class="drawing-one">
             </button>
           </div>
           <div class="illust-text">Correctness</div>
         </div>
         <div>
+          <!--same as most recent notes above but for new drawing-->
           <div class="frame-two">
             <button id='hylics' class="drawing-two">
             </button>
@@ -71,6 +74,7 @@
           <div class="illust-text">Hylics</div>
         </div>
         <div>
+          <!--same as most recent notes above but for new drawing-->
           <div class="frame-three">
             <button id='infestation' class="drawing-three">
             </button>
@@ -78,6 +82,7 @@
           <div class="illust-text">Infestation</div>
         </div>
         <div>
+          <!--same as most recent notes above but for new drawing-->
           <div class="frame-four">
             <button id='bdc' class="drawing-four">
             </button>
@@ -86,6 +91,7 @@
           </div>
         </div>
         <div>
+          <!--drawings to be determined, basically placeholders-->
           <div class="frame-tbd">
             <button id='correctness' class="drawing-tbd">
               ?</button>
@@ -103,12 +109,16 @@
     </div>
   </template>
 
+  <!--"user info" popup template-->
+  <!--custom popup background = blue-->
   <template id="user-popup" data-background="#021da8">
     <h2 style="margin:5px 10px;font-family: 'OCRA';color: white;">USER INFO</h2>
     <div style="float:left;margin: 0 10px; display: flex;">
+      <!--my portrait-->
       <img style='margin: 5px; margin-left: 0px; border-style: outset; border-width: 8px;' src="assets/images/me.jfif"
         alt="user info" width="150" height="150">
     </div>
+    <!--Descriptions-->
     <div
       style="color: white;margin: 0 10px; font-size: 18px; font-family: 'OCRA'; max-width: 600px;min-height: 165px;border-top:solid;border-bottom:solid;border-width:1px; padding: 5px;">
       My name is <strong>Aidan Khan</strong>. I'm a first-year student at Concordia University majoring in
@@ -127,6 +137,7 @@
         combining these skills for various projects, such as animated 3D renders or games.
       </div>
     </div>
+    <!--socials at fixed bottom position, link to other websites-->
     <div style="position: absolute; bottom: 0; right: 0; border-style:solid;border-width:2px; margin: auto;background-color: #021da8; padding: 5px; padding-bottom: 1px
       ; border-color: white;">
       <a target=" _blank" href="https://www.instagram.com/aidankhan51/?igsh=MW9xdTl1NHJnaHI0aA%3D%3D">
@@ -138,10 +149,13 @@
     </div>
   </template>
 
+  <!--template for 3d popup-->
+  <!--custom popup image background-->
   <template id="3d-popup" data-background="url('../assets/images/bend.png')">
     <div style="text-align: center; font-size: 80px; margin: 10px; font-family: 'Ascendant';color: white;">Models
     </div>
     <div>
+      <!--button to trigger 3d model viewer for 'Fafnir'-->
       <button class="jump" id="Fafnir-btn">
         <img src="assets/images/sphere.png" alt="sphere" width="100" height="100">
       </button>
@@ -151,34 +165,41 @@
     </div>
   </template>
 
+  <!--template id for 3d model viewer-->
   <template id="Fafnir-popup">
+    <!--gh pages link to 3d model viewer repo. You can view the code for that one at "https://github.com/AidanKhan51/FafnirModel"-->
     <iframe height=500 width=624 style="float:middle; border: none; cursor: grab;"
       src="https://aidankhan51.github.io/FafnirModel/"></iframe>
   </template>
 
+  <!--popup template for music-->
   <template id="music-popup">
     <div style="margin: 5px; text-align: center; font-family: 'punk'; font-size: 60px; min-width: 374px;">Music</div>
     <div
-      style="font-family: 'forest'; margin-left: 5px; margin-right: 5px; flex:display;flex-direction:row; text-align: center; align-items: center; justify-content: center; padding:0px 3px 0px 3px; min-width: 371px;">
+      style="font-family: 'punk'; margin-left: 5px; margin-right: 5px; flex:display;flex-direction:row; text-align: center; align-items: center; justify-content: center; padding:0px 3px 0px 3px; min-width: 371px;">
       <div style="float: left;">Track</div>
       <div style="float: right;">Length</div>
       <div>Artist </div>
     </div>
     <div
       style="border: solid 1px black; margin: 5px; margin-top: 0px; min-width: 374px; overflow-y: scroll; overflow-x: hidden; max-height:120px;">
+      <!--songs for custom audio player-->
       <div class="tracks">
+        <!--button ids trigger js that starts to play associated audio when clicked, and update the audio player-->
         <button id="flagday-btn" class='track-selector'></button>
         <div style="float: left; margin-left: 5px;"> Flag Day </div>
         <div style="float: right;"> 3m 22</div>
         <div style> Aidan Khan, Bridgit O'Leary</div>
       </div>
       <div class="tracks">
+        <!--same as above-->
         <button id="catwalk-btn" class='track-selector'></button>
         <div style="float: left; margin-left: 5px;"> Catwalk </div>
         <div style="float: right;"> 0m 50</div>
         <div style> Aidan Khan</div>
       </div>
       <div class="tracks">
+        <!--same as above-->
         <button id="hg-btn" class='track-selector'></button>
         <div style="float: left; margin-left: 5px;"> Crusade </div>
         <div style="float: right;"> 2m 40</div>
@@ -189,6 +210,7 @@
       <div class=" audio-player">
         <div class="stereo">
           <div class="icon-container">
+            <!--starting disc image-->
             <img id="disc" src="assets/images/EmptyDisc.png" class="audio-icon">
             <audio src="assets/sounds/Flag Day.mp3" type="audio/mpeg"></audio>
           </div>
