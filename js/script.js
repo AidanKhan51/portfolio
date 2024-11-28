@@ -213,7 +213,7 @@ function makePopup(contentId) {
 		const hgButton = document.getElementById('hg-desc');
 		const hgDiv = document.getElementById('hg');
 		function changeContent() {
-			hgDiv.innerHTML = ' <iframe height=624 width=816 style="float:middle" src = https://pub-82f17d419ef34043973f014068861a94.r2.dev/index.html></iframe>';
+			hgDiv.innerHTML = ' <iframe height=624 width=816 class="showcase" src = https://pub-82f17d419ef34043973f014068861a94.r2.dev/index.html></iframe>';
 		}
 		hgButton.addEventListener('click', changeContent);
 	}
