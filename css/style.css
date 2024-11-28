@@ -550,3 +550,13 @@ body {
 .img-rounder {
   border-radius: 10%;
 }
+
+.jump {
+  width: 100px;
+  height: 100px;
+  transition: 0.5s ease all;
+}
+
+.jump:hover {
+  transform: scale(1.2);
+}
