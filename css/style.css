@@ -51,6 +51,21 @@ body {
   src: url('../assets/fonts/AscendantLight.otf')
 }
 
+@font-face {
+  font-family: 'punk';
+  src: url('../assets/fonts/punk.ttf')
+}
+
+@font-face {
+  font-family: 'forest';
+  src: url('../assets/fonts/forest.otf')
+}
+
+@font-face {
+  font-family: 'Boniface';
+  src: url('../assets/fonts/Oac.otf')
+}
+
 #close-btn,
 #user-btn,
 #twodee-btn,
@@ -295,11 +310,14 @@ body {
   width: 125px;
   height: 125px;
   color: black;
-  background: grey;
+  background-image: url('../assets/images/CDtray.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
   border: solid, 1px, black;
 }
 
@@ -325,8 +343,8 @@ body {
   flex-direction: column;
   width: 100%;
   border: solid, 1px, black;
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: 41px;
+  padding-bottom: 41px;
 }
 
 .player-button {
@@ -402,7 +420,7 @@ body {
 }
 
 .tracks {
-  font-family: 'Ascendant';
+  font-family: 'Boniface';
   border-bottom: solid 1px black;
   flex: display;
   padding: 15px 5px 15px 5px;
@@ -421,7 +439,7 @@ body {
 }
 
 .audio-desc {
-  font-family: 'Ascendant';
+  font-family: 'Boniface';
   margin: 3px;
   border: solid 1px black;
   max-width: 359px;
@@ -434,10 +452,11 @@ body {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  background-image: url('../assets/images/jerma.png');
+  background-image: url('../assets/images/Play.png');
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
+  background-color: white;
 }
 
 .track-selector:hover {
@@ -595,10 +614,14 @@ body {
   width: 100px;
   height: 100px;
   transition: 0.5s ease all;
+  border: none;
+  background: none;
+  filter: brightness(1);
 }
 
 .jump:hover {
   transform: scale(1.2);
+  filter: brightness(3);
 }
 
 .frame-one {

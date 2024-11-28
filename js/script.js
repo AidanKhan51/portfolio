@@ -296,8 +296,8 @@ function makePopup(contentId) {
 
 
 		const playerButton = document.querySelector('.player-button'),
-			playIcon = `<img style="height: 25px; width: 25px;" src="assets/images/jerma.png">`,
-			pauseIcon = `<img style="height: 25px; width: 25px;" src="assets/images/Hylics.png">`;
+			playIcon = `<img style="height: 25px; width: 25px;" src="assets/images/Play.png">`,
+			pauseIcon = `<img style="height: 25px; width: 25px;" src="assets/images/Pause.png">`;
 
 		function toggleAudio() {
 			if (audio.paused) {
@@ -343,9 +343,9 @@ function makePopup(contentId) {
 
 	const soundButton = document.querySelector('.sound-button'),
 		soundIcon = `
-						<img style="height: 25px; width: 25px;" src="assets/images/jerma.png">`,
+						<img style="height: 25px; width: 25px;" src="assets/images/Sound.png">`,
 		muteIcon = `
-							<img style="height: 25px; width: 25px;" src="assets/images/Hylics.png">`;
+							<img style="height: 25px; width: 25px;" src="assets/images/Mute.png">`;
 
 	function toggleSound() {
 		audio.muted = !audio.muted;
