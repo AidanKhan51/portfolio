@@ -8,7 +8,7 @@ using the CSS Grid.
 Also hides overflow.
 
 **********************************************/
-
+/*body styling including background*/
 body {
   padding: 0;
   margin: 0;
@@ -26,6 +26,7 @@ body {
   min-width: 615px;
 }
 
+/*fonts*/
 @font-face {
   font-family: 'OCRA';
   src: url('../assets/fonts/OCR-A.ttf');
@@ -66,6 +67,7 @@ body {
   src: url('../assets/fonts/Oac.otf')
 }
 
+/*cursor feedback for classes*/
 #close-btn,
 #user-btn,
 #twodee-btn,
@@ -76,7 +78,7 @@ body {
   cursor: pointer;
 }
 
-/* popup styling */
+/*popup styling*/
 .popup {
   background: white;
   border: 1px solid black;
@@ -106,11 +108,13 @@ body {
   cursor: grabbing;
 }
 
+/*content container for popup*/
 .content-cnt {
   overflow: auto;
   padding: 1em;
 }
 
+/*main grid website*/
 .main-grid {
   filter: drop-shadow(0 0 0.75rem rgb(149, 187, 218));
   display: grid;
@@ -118,6 +122,7 @@ body {
   margin: 3em;
 }
 
+/*grid for section buttons*/
 .start-grid {
   position: relative;
   display: grid;
@@ -139,6 +144,7 @@ body {
   justify-content: center;
 }
 
+/*grid for images in Illustration section*/
 .img-grid {
   display: grid;
   justify-items: center;
@@ -147,12 +153,14 @@ body {
   gap: 1em;
 }
 
+/*center of popups*/
 .popup-center {
   display: flex;
   flex-direction: column;
   overflow: auto;
 }
 
+/*fedback for resizing popups*/
 .nw-corner {
   cursor: nw-resize;
 }
@@ -185,12 +193,14 @@ body {
   cursor: se-resize;
 }
 
+/*align text and buttons on main grid that open popups*/
 .text-button {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/*close button for popups*/
 .closeButton {
   background-image: url('../assets/images/Close.png');
   background-size: cover;
@@ -206,6 +216,7 @@ body {
   filter: brightness(0.8);
 }
 
+/*description for games in games popup*/
 .gameDesc {
   font-family: 'Dots';
   align-content: center;
@@ -220,6 +231,7 @@ body {
   letter-spacing: 1px
 }
 
+/*text styling for buttons that open popups*/
 .appText {
   color: rgb(255, 255, 255);
   font-size: 20px;
@@ -233,6 +245,7 @@ body {
   align-content: center;
 }
 
+/*text styling for illustration names*/
 .illust-text {
   margin: 5px;
   text-align: center;
@@ -241,6 +254,7 @@ body {
   color: white;
 }
 
+/*button backgrounds for buttons on main grid that open popups*/
 .buttonBg {
   background: black;
   background-size: cover;
@@ -255,6 +269,7 @@ body {
   background: white;
 }
 
+/*style for game button*/
 .gameBtn {
   margin: 10px 10px;
   border: none;
@@ -266,6 +281,7 @@ body {
   filter: brightness(0.8)
 }
 
+/*webkit tools for custom scrollnbar*/
 ::-webkit-scrollbar {
   width: 16px
 }
@@ -298,6 +314,7 @@ body {
   cursor: grabbing;
 }
 
+/*socials for user popup*/
 .socials {
   margin: 5px;
 }
@@ -306,6 +323,7 @@ body {
   filter: brightness(0)
 }
 
+/*icon container for audio disc icon*/
 .icon-container {
   width: 125px;
   height: 125px;
@@ -321,6 +339,7 @@ body {
   border: solid, 1px, black;
 }
 
+/*audio disc icon*/
 .audio-icon {
   margin: 5px;
   width: 130px;
@@ -332,12 +351,14 @@ body {
   animation: 4s rotate infinite linear;
 }
 
+/*audio disc icon rotate keyframes*/
 @keyframes rotate {
   100% {
     transform: rotate(1turn)
   }
 }
 
+/*custom audio player controls*/
 .controls {
   display: flex;
   flex-direction: column;
@@ -347,6 +368,7 @@ body {
   padding-bottom: 41px;
 }
 
+/*custom audio playbutton*/
 .player-button {
   background-color: transparent;
   border: 0;
@@ -360,6 +382,7 @@ body {
   filter: brightness(0.9);
 }
 
+/*custom audio timeline*/
 .timeline {
   -webkit-appearance: none;
   height: 15px;
@@ -371,6 +394,7 @@ body {
   margin-left: 6px;
 }
 
+/*custom audio timeline thumb*/
 .timeline::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 1em;
@@ -388,6 +412,7 @@ body {
   filter: brightness(0.)
 }
 
+/*custom audio timeline slider*/
 .timeline::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   box-shadow: none;
@@ -395,17 +420,19 @@ body {
   background: transparent;
 }
 
+/*audio player style*/
 .audio-player {
   --player-button-width: 3em;
   --sound-button-width: 2em;
   --space: .5em;
 }
 
+/*timeline input style*/
 .timeline {
   width: 200px;
   margin-right: var(--space);
 }
-
+/* sound button style */
 .sound-button {
   background-color: transparent;
   border: 0;
@@ -419,6 +446,7 @@ body {
   filter: brightness(0.9);
 }
 
+/* audio track selector text style */
 .tracks {
   font-family: 'Boniface';
   border-bottom: solid 1px black;
@@ -432,12 +460,14 @@ body {
   font-size: 13px;
 }
 
+/*custom audio player style*/
 .stereo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*custom audio description style*/
 .audio-desc {
   font-family: 'Boniface';
   margin: 3px;
@@ -447,6 +477,7 @@ body {
   font-size: 15px;
 }
 
+/*custom audio track selector style*/
 .track-selector {
   float: left;
   cursor: pointer;
@@ -463,6 +494,7 @@ body {
   filter: brightness(0.8)
 }
 
+/*game description style*/
 .game-desc {
   text-align: center;
   color: white;
@@ -471,11 +503,13 @@ body {
   font-size: 40px;
 }
 
+/*game description subheading style*/
 .game-desc-small {
   margin: 10px;
   font-size: 15px;
 }
 
+/*game description button style*/
 .game-desc-btn {
   width: 100px;
   height: 40px;
@@ -494,6 +528,7 @@ body {
   filter: brightness(0.8)
 }
 
+/* illustration title */
 .illust-title {
   text-align: center;
   font-family: "Hidro";
@@ -502,12 +537,14 @@ body {
   color: white;
 }
 
+/* illustration subtitle */
 .illust-subtitle {
   font-family: "Hidro";
   font-size: 60px;
   color: white;
 }
 
+/* illustration description */
 .illust-desc {
   font-family: "Hidro";
   margin: 10px;
@@ -517,6 +554,7 @@ body {
   line-height: 1.5;
 }
 
+/* first drawing style */
 .drawing-one {
   background-image: url('../assets/images/Correctness.jpg');
   background-size: cover;
@@ -527,10 +565,12 @@ body {
   border-style: none;
 }
 
+/* hover over frame changing background image */
 .frame-one:hover {
   background-image: url('../assets/images/frameGold.png');
 }
 
+/*second drawing style*/
 .drawing-two {
   background-image: url('../assets/images/Hylics.png');
   background-size: cover;
@@ -545,6 +585,7 @@ body {
   background-image: url('../assets/images/frameGold.png');
 }
 
+/* third drawing style */
 .drawing-three {
   background-image: url('../assets/images/Infest.png');
   background-size: cover;
@@ -559,6 +600,7 @@ body {
   background-image: url('../assets/images/frameGold.png');
 }
 
+/*fourth drawing style*/
 .drawing-four {
   background-image: url('../assets/images/BoysDontCry.jpg');
   background-size: cover;
@@ -574,7 +616,7 @@ body {
   background-image: url('../assets/images/frameGold.png');
 }
 
-
+/* "coming soon" drawing style */
 .drawing-tbd {
   background: black;
   width: 200px;
@@ -589,6 +631,7 @@ body {
   background-image: url('../assets/images/frameGold.png');
 }
 
+/*popup back button style*/
 .back-btn {
   width: 50px;
   height: 50px;
@@ -606,10 +649,12 @@ body {
   cursor: pointer;
 }
 
+/*rounds corner of element*/
 .img-rounder {
   border-radius: 10%;
 }
 
+/*style to make button "pop out" in models popup*/
 .jump {
   width: 100px;
   height: 100px;
@@ -624,6 +669,7 @@ body {
   filter: brightness(3);
 }
 
+/*photo frames for illustrations*/
 .frame-one {
   background-image: url('../assets/images/frame.png');
   background-repeat: no-repeat;

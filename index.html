@@ -219,9 +219,11 @@
               <input type="range" class="timeline" max="100" value="0">
             </div>
             <div style="align-items: left;">
+               <!--class for event listener that plays and pauses audio-->
               <button class="player-button">
                 <img style="height: 25px; width: 25px;" src="assets/images/Pause.png">
               </button>
+              <!--class for event listener that mutes audio-->
               <button class="sound-button">
                 <img style="height: 25px; width: 25px;" src="assets/images/Sound.png">
               </button>
@@ -230,20 +232,24 @@
         </div>
       </div>
     </div>
+    <!--class for event listener that changes music description text-->
     <div id='change-text' class="audio-desc">
       Click on a track to play it!
     </div>
     </div>
   </template>
 
+  <!--template for games popup-->
   <template id="games-popup" data-background="url('../assets/images/GamePaper.png')">
     <strong style=" font-family: 'SCDF' ;font-size: 50px; color: white;">PROJECTS</strong>
+     <!--section for games that can be run on site-->
     <div
       style="letter-spacing: 1px;color: white;font-family: 'Dots';border-bottom: dotted;border-width:3px; margin: 15px 0px; font-family: 'Dots'; font-size: 20px; padding-bottom: 3px;">
       Ready to play
     </div>
     <div style="display:flex; flex-wrap: wrap;">
       <div>
+         <!--button id for first game-->
         <button id="hg3r-btn" class="gameBtn">
           <img src="assets/images/HG3.png" alt="HG3R" width="100" height="100">
         </button>
@@ -253,6 +259,7 @@
         </div>
       </div>
       <div>
+         <!--button id for second game-->
         <button id="TOOSLOW-btn" class="gameBtn">
           <img src="assets/images/Hand.png" alt="TOO SLOW" width="100" height="100">
         </button>
@@ -262,6 +269,7 @@
         </div>
       </div>
       <div>
+         <!--button id for third game-->
         <button id="GAMBLE-btn" class="gameBtn">
           <img src="assets/images/Frog.png" alt="GAMBLEGAMBLEGAMBLE" width="100" height="100">
         </button>
@@ -271,6 +279,7 @@
         </div>
       </div>
     </div>
+     <!--section for games that open a link-->
     <div
       style="letter-spacing: 1px;color: white;border-bottom:dotted;border-width:3px; margin: 15px 0px;font-family: 'Dots'; font-size: 20px;padding-bottom: 3px;">
       Download
@@ -290,47 +299,52 @@
       </div>
   </template>
 
+   <!--template for first game-->
   <template id="hg3r-popup" data-background="url('../assets/images/GamePaper.png')">
     <div id="hg" class="game-desc">
       HIM Games 3
       <div class="game-desc-small">Here's where I write things about the game</div>
       <div>
+         <!--button id to launch iframe-->
         <button id="hg-desc" class="game-desc-btn">PLAY!</button>
       </div>
     </div>
   </template>
 
+   <!--template for second game-->
   <template id="TOOSLOW-popup" data-background="url('../assets/images/GamePaper.png')">
     <div id="tooslow" class="game-desc">
       TOO SLOW
       <div class="game-desc-small">Here's where I write things about the game</div>
       <div>
+        <!--button id to launch iframe-->
         <button id="tooslow-desc" class="game-desc-btn">PLAY!</button>
       </div>
     </div>
   </template>
 
+  <!--template for third game-->
   <template id="GAMBLE-popup" data-background="url('../assets/images/GamePaper.png')">
     <div id="gamble" class="game-desc">
       GAMBLEGAMBLEGAMBLE
       <div class="game-desc-small">Here's where I write things about the game</div>
       <div>
+        <!--button id to launch iframe-->
         <button id="gamble-desc" class="game-desc-btn">PLAY!</button>
       </div>
     </div>
   </template>
 
+  <!--template for best of popup-->
   <template id="bestOf-popup">
     <h2 style="text-align: center;">Best of</h2>
     <h3 style="text-align: center;">Work In Progress!</h3>
   </template>
 
-
-
-
   <!-- Menu buttons to access pages on the website-->
   <div class="main-grid">
     <div class="start-grid">
+      <!--overlay images for grid-->
       <img
         style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none; width: 100%; height: 100%"
         src="assets/images/PerfectCRT.png">
@@ -338,36 +352,42 @@
         style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none; width: 100%; height: 100%"
         src="assets/images/Screen.png">
       <div class="text-button">
+        <!--button for popup-->
         <button id="user-btn" class="buttonBg">
           <img src="assets/images/User.gif" alt="user info" width="150" height="150">
         </button>
         <div class="appText">User Info</div>
       </div>
       <div class="text-button">
+         <!--button for popup-->
         <button id="twodee-btn" class="buttonBg">
           <img src="assets/images/Paint.gif" width="150" height="150">
         </button>
         <div class="appText">Illustrations</div>
       </div>
       <div class="text-button">
+         <!--button for popup-->
         <button id="threedee-btn" class="buttonBg">
           <img src="assets/images/Cube.gif" alt="3D models" width="150" height="150">
         </button>
         <div class="appText">Models</div>
       </div>
       <div class="text-button">
+         <!--button for popup-->
         <button id="music-btn" class="buttonBg">
           <img src="assets/images/Music.gif" alt="Music" width="150" height="150">
         </button>
         <div class="appText">Music</div>
       </div>
       <div class="text-button">
+         <!--button for popup-->
         <button id="games-btn" class="buttonBg">
           <img src="assets/images/Controller.gif" alt="Projects" width="150" height="150">
         </button>
         <div class="appText">Projects</div>
       </div>
       <div class="text-button">
+         <!--button for popup-->
         <button id="bestOf-btn" class="buttonBg">
           <img src="assets/images/Trophy.gif" alt="Bookmarks" width="150" height="150">
         </button>
