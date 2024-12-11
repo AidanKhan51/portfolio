@@ -24,6 +24,10 @@ const initializers = {
 			makePopup('GAMBLE-popup');
 
 		});
+		document.getElementById('darts-btn').addEventListener('click', () => {
+			makePopup('darts-popup');
+
+		});
 	}
 }
 
@@ -108,7 +112,7 @@ function makePopup(contentId) {
 		popup.style.height = (popup.clientHeight - movementY) + 'px';
 	});
 
-//north border resizer
+	//north border resizer
 	registerResizer(popup, '.north-border', e => {
 		const movementY = e.movementY;
 		if (popup.clientHeight - e.movementY < 350) {
@@ -264,7 +268,7 @@ function makePopup(contentId) {
 	}
 
 
-//if second game is open
+	//if second game is open
 	if (contentId == 'TOOSLOW-popup') {
 		const tooslowButton = document.getElementById('tooslow-desc');
 		const tooslowDiv = document.getElementById('tooslow');
@@ -285,6 +289,17 @@ function makePopup(contentId) {
 			gambleDiv.innerHTML = '  <iframe height=800 width=640 style="float:middle" src = https://aidankhan51.github.io/CreativeComputation/GambleGambleGamble></iframe>';
 		}
 		gambleButton.addEventListener('click', changeContent);
+	}
+
+	//if fourth game is open
+	if (contentId == 'darts-popup') {
+		const dartsButton = document.getElementById('darts-desc');
+		const dartsDiv = document.getElementById('darts');
+		//iframe to hosted game link
+		function changeContent() {
+			dartsDiv.innerHTML = ' <iframe height=800 width=800 class="showcase" src = https://aidankhan51.github.io/CreativeComputation/Variations%20Jam/></iframe>';
+		}
+		dartsButton.addEventListener('click', changeContent);
 	}
 
 	//const for music popup
@@ -337,7 +352,7 @@ function makePopup(contentId) {
 			playIcon = `<img style="height: 25px; width: 25px;" src="assets/images/Play.png">`,
 			pauseIcon = `<img style="height: 25px; width: 25px;" src="assets/images/Pause.png">`;
 
-			//toggle play button and pause button
+		//toggle play button and pause button
 		function toggleAudio() {
 			if (audio.paused) {
 				audio.play();
