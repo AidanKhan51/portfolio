@@ -66,8 +66,8 @@ function makePopup(contentId) {
 	initializers[contentId]?.()
 	modelInitializers[contentId]?.()
 
-	popup.style.top = Math.floor(Math.random() * 400) + 100 + 'px';
-	popup.style.left = Math.floor(Math.random() * 900) + 300 + 'px';
+	popup.style.top = Math.floor(Math.random() * 300) + 100 + 'px';
+	popup.style.left = Math.floor(Math.random() * 600) + 300 + 'px';
 
 	//top bar movement
 	registerResizer(popup, '.top-bar', e => {
@@ -458,5 +458,17 @@ function registerResizer(parent, selector, func) {
 		window.addEventListener('mouseup', mouseUp);
 		document.body.style.userSelect = 'none';
 	});
-}
 
+	el.addEventListener('touchstart', e => {
+		e.preventDefault()
+		const touchUp = () => {
+			window.removeEventListener('touchmove', func);
+			window.removeEventListener('touchend', touchUp);
+			document.body.style.userSelect = '';
+		};
+
+		window.addEventListener('touchmove', func);
+		window.addEventListener('touchend', touchUp);
+		document.body.style.userSelect = 'none';
+	});
+}
