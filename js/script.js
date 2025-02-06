@@ -447,30 +447,18 @@ A global mouseup listener is also added to stop listening for mousemove when use
 function registerResizer(parent, selector, func) {
 	const el = parent.querySelector(selector);
 
-	el.addEventListener('mousedown', e => {
+	el.addEventListener('pointerdown', e => {
 		const mouseUp = () => {
-			window.removeEventListener('mousemove', func);
-			window.removeEventListener('mouseup', mouseUp);
+			window.removeEventListener('pointermove', func);
+			window.removeEventListener('pointerup', mouseUp);
 			document.body.style.userSelect = '';
 		};
 
-		window.addEventListener('mousemove', func);
-		window.addEventListener('mouseup', mouseUp);
+		window.addEventListener('pointermove', func);
+		window.addEventListener('pointerup', mouseUp);
 		document.body.style.userSelect = 'none';
 	});
 
-	el.addEventListener('touchstart', e => {
-		e.preventDefault()
-		const touchUp = () => {
-			window.removeEventListener('touchmove', func);
-			window.removeEventListener('touchend', touchUp);
-			document.body.style.userSelect = '';
-		};
-
-		window.addEventListener('touchmove', func);
-		window.addEventListener('touchend', touchUp);
-		document.body.style.userSelect = 'none';
-	});
 }
 
 //finish touch controls
