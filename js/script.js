@@ -472,3 +472,6 @@ function registerResizer(parent, selector, func) {
 		document.body.style.userSelect = 'none';
 	});
 }
+
+//finish touch controls
+//media queries for tablet n small laptop

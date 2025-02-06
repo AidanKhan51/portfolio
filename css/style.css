@@ -738,7 +738,7 @@ body {
     height: 50px;
   }
 
-  .body {
-    background-image: url('../assets/images/BGmobile.png');
+  body {
+    background-image: url('../assets/images/BGmobile.png') !important;
   }
 }
