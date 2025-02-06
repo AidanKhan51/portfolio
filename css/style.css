@@ -102,6 +102,7 @@ body {
   background: rgba(211, 211, 211, 0.925);
   user-select: none;
   cursor: grab;
+  touch-action: none;
 }
 
 .top-bar:active {
